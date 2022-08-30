@@ -3,36 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Heather Bree: Basic HTML Bio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<h1>Heather Bree</h1>
+<h1 class="bottomBorder">Heather Bree</h1>
 
-<img src="https://picsum.photos/id/1062/700/300" alt="little dog in a blanket">
+<nav class="bottomBorder">
+  <img id="navImg" src="https://picsum.photos/id/1062/700/300" alt="little dog in a blanket">
 
-<h3>Where to find me:</h3>
-<ul>
-  <li>
-    twitter: <a href="https://twitter.com/justheatherbree">@justheatherbree</a> 
-  </li>
-  <li>
-    website: <a href="https://justheatherbree.com/">justheatherbree.com</a> 
-  </li>
-  <li>
-    linkedin: <a href="https://www.linkedin.com/in/justheatherbree">/justheatherbree</a> 
-  </li>
-</ul>
+  <div id="navLinks">
+    <h3>Where to find me:</h3>
+    <ul>
+      <li class="navLIs">
+        twitter: <a href="https://twitter.com/justheatherbree">@justheatherbree</a> 
+      </li>
+      <li class="navLIs">
+        website: <a href="https://justheatherbree.com/">justheatherbree.com</a> 
+      </li>
+      <li class="navLIs">
+        linkedin: <a href="https://www.linkedin.com/in/justheatherbree">/justheatherbree</a> 
+      </li>
+    </ul>    
+  </div>
+</nav>
 
 <section>
-  <h3>My Past Work and Future Goals:</h3>
+  <h3>My Past Work:</h3>
   <article>
     <a href="/VBA-challenge"><h5>VBA Challenge</h5></a>
     <a href="/VBA-challenge"><img src="https://picsum.photos/seed/project1/100" alt=""></a>
   
     <p>
-      Fondue cow danish fontina. The big cheese st. agur blue cheese bocconcini cow fromage goat mozzarella bavarian bergkase. Cheese triangles paneer roquefort goat cheese and wine cauliflower cheese fondue emmental. Cheese triangles.
+      Fondue cow danish fontina. The big cheese st. agur blue cheese bocconcini cow fromage goat mozzarella bavarian bergkase. Cheese triangles paneer roquefort goat cheese and wine cauliflower cheese fondue emmental. Cheese triangles. Gouda stinking bishop jarlsberg. Croque monsieur hard cheese cheese slices say cheese stilton blue castello manchego when the cheese comes out everybody's happy. Halloumi cow boursin cheesecake taleggio caerphilly mozzarella goat. Monterey jack camembert de normandie cheese on toast say cheese airedale cauliflower cheese roquefort hard cheese. Gouda.
     </p>  
   </article>  
+  <article>
+    <a href="/awesomeproject2"><h5>Awesome Project</h5></a>
+    <a href="/awesomeproject2"><img src="https://picsum.photos/seed/project2/100" alt=""></a>
+
+    <p>
+      Fromage macaroni cheese halloumi. Pecorino port-salut pepper jack blue castello cheese strings cheese slices croque monsieur danish fontina. Jarlsberg cheese triangles stinking bishop cheesy grin paneer cottage cheese roquefort airedale. Stinking bishop emmental fromage frais roquefort cheese on toast cheese strings hard cheese red leicester. Cream cheese.
+    </p>
+  </article>
+  <h3>My Future Goals:</h3>
+  <p>
+    Paneer brie lancashire. Mascarpone paneer goat squirty cheese cheese slices cow jarlsberg taleggio. Boursin brie blue castello emmental cut the cheese cow danish fontina cheese and wine. Cheesecake the big cheese mascarpone goat cheese on toast manchego cheese and wine cheddar. Gouda.
+  </p>
+  <ul id="skills">
+    <li>data visualization</li>
+    <li>javascript</li>
+    <li>d3.js</li>
+    <li>html</li>
+    <li>css</li>
+    <li>data analysis</li>
+    <li>python</li>
+    <li>postgres</li>
+    <li>mongodb</li>
+  </ul>
 </section>
 </body>
 
