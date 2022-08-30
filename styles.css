@@ -4,6 +4,11 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#title {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
 h1 {
     text-align: center;
     padding-bottom: .5em;
@@ -12,6 +17,7 @@ h1 {
 
 nav {
     display: flex;
+    padding-top: 74px;
 }
 
 #navImg {
