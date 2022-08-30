@@ -82,3 +82,10 @@ article h5 {
     border-width: 3px;
     padding: .25em .35em;
 }
+
+.clearfix::after {
+    content: ""; 
+    display: block;
+    clear: both;
+}
+    
