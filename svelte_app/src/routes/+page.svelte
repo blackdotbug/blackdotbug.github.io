@@ -1,0 +1,145 @@
+<script>
+    import HeroImg from '$lib/components/HeroImg.svelte';
+
+</script>
+
+<section class="py-10 md:py-16">
+
+    <div class="container max-w-screen-xl mx-auto px-4">
+
+        <div class="text-center">
+            <HeroImg />
+            <div class="w-5/8 p-8 bg-gray-100 rounded-md">
+                <h6 class="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Heather Bree</h6>
+
+                <h1 class="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Data Visualization Specialist</h1>
+    
+                <p class="font-normal text-gray-600 text-md md:text-xl mb-16">Senior front-end web developer, with specialities in svelte, d3.js, leaflet.js and react. Data analysis chops in python. Civic data nerd.</p>    
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-10 md:py-16">
+
+    <div class="container max-w-screen-xl mx-auto px-4 w-5/8 p-8 bg-gray-100 rounded-md">
+        <div class="text-center h-[175px]">
+            <a href="http://govex.jhu.edu" class="px-7 py-3 md:px-9 md:py-4 m-auto font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">I work at GovEx</a>
+            <h2 class="font-medium text-gray-400 text-2xl md:text-4xl mt-8 mb-8">Some Examples of My Work There:</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
+                <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
+                    <a href="http://coronavirus.jhu.edu"><img src="assets/crc.png" alt="screenshot of a world choropleth map"></a>
+                </div>
+
+                <a href="http://coronavirus.jhu.edu"><h4 class="font-medium text-gray-700 text-lg mb-4">JHU Coronavirus Resource Center</h4></a>
+
+                <p class="font-normal text-gray-500 text-md">I added lots of custom D3.js data visualizations to the react-based Coronavirus Resource Center website.</p>
+            </div>
+            
+            <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
+                <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
+                    <a href="https://lunghealthdashboard.breathecenter.org/"><img src="assets/breathe.png" alt="screenshot of an air quality level timeline"></a>
+                </div>
+
+                <a href="https://lunghealthdashboard.breathecenter.org/"><h4 class="font-medium text-gray-700 text-lg mb-4">BREATHE Center Lung Health Report</h4></a>
+
+                <p class="font-normal text-gray-500 text-md">I built a vanilla javascript scrollytelling website for the JHU BREATHE Center's report on Baltimore lung health.</p>
+            </div>
+            
+            <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
+                <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
+                    <a href="https://cde.govex.jhu.edu/"><img src="assets/cde.png" alt="screenshot of a world choropleth map"></a>
+                </div>
+
+                <a href="https://cde.govex.jhu.edu/"><h4 class="font-medium text-gray-700 text-lg mb-4">City Data Explorer</h4></a>
+
+                <p class="font-normal text-gray-500 text-md">I am a senior developer on the Bloomberg Center for Government Excellence City Data Explorer project, providing most of the custom D3.js visualizations in the react-based website.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="py-10 md:py-16">
+
+    <div class="container max-w-screen-xl mx-auto px-4 w-5/8 p-8 bg-gray-100 rounded-md">
+        <div class="text-center h-[125px]">
+            <h2 class="font-medium text-gray-400 text-2xl md:text-4xl mt-8 mb-8">Some Examples of My Work Elsewhere:</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
+                <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
+                    <a href="https://blackdotbug.github.io/pdxrankchoice/"><img src="assets/pdxrankchoice.png" alt="screenshot of a sankey diagram"></a>
+                </div>
+
+                <a href="https://blackdotbug.github.io/pdxrankchoice/"><h4 class="font-medium text-gray-700 text-lg mb-4">PDX Rank Choice Voting</h4></a>
+
+                <p class="font-normal text-gray-500 text-md">I wrote a scrollytelling article using svelte and layercake analyzing the 2024 Portland Mayoral Race and how ranked choice voting worked in that election.</p>
+            </div>
+            
+            <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
+                <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
+                    <a href="https://blackdotbug.github.io/lifegraph/"><img src="assets/lifegraph.png" alt="screenshot of an air quality level timeline"></a>
+                </div>
+
+                <a href="https://blackdotbug.github.io/lifegraph/"><h4 class="font-medium text-gray-700 text-lg mb-4">My Life Graph</h4></a>
+
+                <p class="font-normal text-gray-500 text-md">I built a force-directed node diagram of my life in svelte. It's got lots of little easter eggs and you'll learn more than you wanted to know about me.</p>
+            </div>
+            
+            <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
+                <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
+                    <a href="https://labs.centerforgov.org/cde-sonification/"><img src="assets/sonification.png" alt="screenshot of a audio player with waveform illustration"></a>
+                </div>
+
+                <a href="https://labs.centerforgov.org/cde-sonification/"><h4 class="font-medium text-gray-700 text-lg mb-4">Data Sonification Project Prototype</h4></a>
+
+                <p class="font-normal text-gray-500 text-md">I mentored an intern who helped me build a data sonification prototype for turning some data from the City Data Explorer into sound.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
+
+    <div class="container max-w-screen-xl mx-auto w-5/8 p-8 bg-gray-100 rounded-md">
+        <div class="text-center h-[125px]">
+            <h2 class="font-medium text-gray-400 text-2xl md:text-4xl mt-8 mb-8">You can find me here:</h2>
+        </div>
+    
+        <div class="text-center">
+            <div class="flex items-center justify-center space-x-8">
+                <a href="https://bsky.app/profile/hbree.bsky.social" class="w-16 h-16 flex items-center justify-center  opacity-50 hover:opacity-100 transition ease-in-out duration-500">
+                    <img src="Bluesky_Logo.png" alt="bluesky logo" class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500">
+                </a>
+
+                <a href="http://linkedin.com/in/justheatherbree" class="w-16 h-16 flex items-center justify-center opacity-50 hover:opacity-100 transition ease-in-out duration-500">
+                    <img src="LI-In-Bug.png" alt="linkedin logo" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500">
+                </a>
+
+                <a href="https://github.com/blackdotbug" class="w-16 h-16 flex items-center justify-center  opacity-50 hover:opacity-100 transition ease-in-out duration-500">
+                    <img src="github-mark.png" alt="github logo" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500">
+                </a>
+            </div>
+        </div>
+        <p class="text-center font-light mt-9">&copy; 2025 Heather Bree</p>
+
+    </div>
+
+</footer>
+
+<style>
+    :global(body) {
+        background-image: url("bckgd_tile_b.png");
+        background-size: 400px;
+    }
+</style>
