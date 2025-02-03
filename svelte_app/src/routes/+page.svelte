@@ -139,7 +139,7 @@
 
 <style>
     :global(body) {
-        background-image: url("bckgd_tile_b.png");
+        background-image: url("/bckgd_tile_b.png");
         background-size: 400px;
     }
 </style>
