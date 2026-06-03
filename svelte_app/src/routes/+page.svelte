@@ -85,7 +85,7 @@
             
             <div class="bg-gray-50 px-8 py-10 rounded-md border-4 border-gray-500">
                 <div class="w-full flex justify-center bg-gray-100 rounded-md mb-4">
-                    <a href="https://blackdotbug.github.io/lifegraph/"><img src="assets/lifegraph.png" alt="screenshot of an air quality level timeline"></a>
+                    <a href="https://blackdotbug.github.io/lifegraph/"><img src="assets/lifegraph.png" alt="screenshot of a force-directed node graph of my life, with nodes colored by pillar, event, person, and location"></a>
                 </div>
 
                 <a href="https://blackdotbug.github.io/lifegraph/"><h4 class="font-medium text-gray-700 text-lg mb-4">My Life Graph</h4></a>

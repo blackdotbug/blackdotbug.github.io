@@ -1,36 +1,37 @@
 <script>
-	import {onMount, tick} from 'svelte'
+	import { onMount } from 'svelte'
 
-    let index = $state(0);
-    let interval = $state();
+    const COUNT = 71;   // number of portraits: assets/me/me_1.jpg … me_71.jpg
+    const DELAY = 5000; // ms each portrait shows before crossfading to the next
 
-    const start = () => interval = setInterval(() => index = (index + 1) % 3, 5000)
-    const stop = () => clearInterval(interval)
-    const pickAnother = (num1) => {
-        let num2 = num1;
-        while (num2 === num1) {
-            num2 = Math.floor(Math.random() * (71 - 1 + 1)) + 1;
-        }
-        return num2;
+    // a portrait number in 1..COUNT, avoiding any already on screen
+    const pick = (exclude = []) => {
+        let n;
+        do {
+            n = Math.floor(Math.random() * COUNT) + 1;
+        } while (exclude.includes(n));
+        return n;
     }
-    onMount(() => {
-        start()
-        return () => stop() //executed when component is destroyed
-    })
-    let prev = $state(Math.floor(Math.random() * (71 - 1 + 1)) + 1);
-    let curr = $derived(pickAnother(prev));
-    let next = $derived(pickAnother(curr));
-    let images = $derived([
-        `assets/me/me_${prev}.jpg`,
-        `assets/me/me_${curr}.jpg`,
-        `assets/me/me_${next}.jpg`
-    ]);
-    $effect(() => {
-        if (index === 1) {
-            tick().then(() => setTimeout(() => prev = pickAnother(next), 7500))
-        }
-    });
 
+    // Filled in on mount (client only). Picking random faces during init would run
+    // on both the prerender and the browser, producing different markup and a
+    // hydration mismatch — so we start empty and seed three distinct faces on mount.
+    let slots = $state([]);
+    let index = $state(0); // which stacked slot is currently visible
+    let images = $derived(slots.map((n) => `assets/me/me_${n}.jpg`));
+
+    onMount(() => {
+        while (slots.length < 3) slots.push(pick(slots));
+        const id = setInterval(() => {
+            index = (index + 1) % slots.length;
+            // Refresh the one slot that is hidden AND not mid-transition: the slot
+            // after the visible one. It won't be shown again until it has a fresh
+            // face, so swapping its src here is invisible and never interrupts a fade.
+            const idle = (index + 1) % slots.length;
+            slots[idle] = pick(slots);
+        }, DELAY);
+        return () => clearInterval(id); // executed when component is destroyed
+    })
 </script>
 <div id="frame" class="relative width-full height-full min-h-[650px] max-w-[650px] overflow-clip m-auto">
     {#each images as image, i}
